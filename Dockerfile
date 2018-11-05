@@ -10,7 +10,8 @@ RUN apt update && \
     rm -fr ./entities-simulator && \
     apt purge -y git && \
     apt clean
-
+COPY ./air_quality_observed.py /src/ 
+COPY ./traffic_flow_observed.py /src/
 
 WORKDIR /src
 
